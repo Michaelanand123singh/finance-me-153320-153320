@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceMe - Empowering Students Financially</title>
+    <meta name="description"
+        content="FinanceMe: A financial literacy startup for school students in urban India. Learn about saving, budgeting, and investing.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FinanceMe - Empowering Students Financially">
+    <meta property="og:description"
+        content="FinanceMe: A financial literacy startup for school students in urban India. Learn about saving, budgeting, and investing.">
+    <meta property="og:url" content="https://financeme.example.com">
+    <meta property="og:image" content="/uploads/logo_1755716872.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="FinanceMe - Empowering Students Financially">
+    <meta property="twitter:description"
+        content="FinanceMe: A financial literacy startup for school students in urban India. Learn about saving, budgeting, and investing.">
+    <meta property="twitter:image" content="/uploads/logo_1755716872.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#374151',
+                        accent: '#10B981',
+                        neutral: '#F3F4F6',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- JSON-LD markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FinanceMe",
+        "url": "https://financeme.example.com",
+        "logo": "https://financeme.example.com/uploads/logo_1755716872.png",
+        "description": "FinanceMe: A financial literacy startup for school students in urban India.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Startup Street",
+            "addressLocality": "Mumbai",
+            "addressRegion": "MH",
+            "postalCode": "400001",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9876543210",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "hi"]
+        },
+        "sameAs": [
+            "https://www.facebook.com/FinanceMe",
+            "https://twitter.com/FinanceMe",
+            "https://www.linkedin.com/company/FinanceMe"
+        ]
+    }
+    </script>
+</head>
+
+<body class="bg-neutral font-sans">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md" role="banner">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3" aria-label="Main navigation">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" aria-label="FinanceMe Home">
+                        <img class="h-10 w-auto" src="/uploads/logo_1755716872.png" alt="FinanceMe Logo">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors" aria-label="About Us">About</a>
+                        <a href="#contact" class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors" aria-label="Contact Us">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open main menu">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!--
+                            Heroicon name: outline/x
+                            Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors" aria-label="About Us (Mobile)">About</a>
+                <a href="#contact" class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors" aria-label="Contact Us (Mobile)">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-100 to-blue-50" role="region" aria-labelledby="hero-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img class="h-20 w-auto mx-auto mb-8" src="/uploads/logo_1755716872.png" alt="FinanceMe Logo">
+            <h1 id="hero-title" class="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl mb-4">
+                Empowering Students with Financial Literacy
+            </h1>
+            <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                Learn the basics of saving, budgeting, and investing. Start your financial journey today!
+            </p>
+            <div class="mt-8 sm:flex sm:justify-center lg:justify-center">
+                <div class="rounded-md shadow">
+                    <a href="#features" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-colors" aria-label="Learn More">
+                        Learn More
+                    </a>
+                </div>
+                <div class="mt-3 sm:mt-0 sm:ml-3">
+                    <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-neutral hover:bg-gray-200 md:py-4 md:text-lg md:px-10 transition-colors" aria-label="Contact Us">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Badges -->
+    <section class="py-12 bg-white" role="region" aria-labelledby="social-proof-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="social-proof-title" class="text-center text-2xl font-semibold text-gray-700 mb-8">Trusted By</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+                <img src="https://via.placeholder.com/150x50.png?text=Partner1" alt="Partner 1" class="h-12 w-auto grayscale opacity-75 hover:opacity-100 transition-opacity">
+                <img src="https://via.placeholder.com/150x50.png?text=Partner2" alt="Partner 2" class="h-12 w-auto grayscale opacity-75 hover:opacity-100 transition-opacity">
+                <img src="https://via.placeholder.com/150x50.png?text=Partner3" alt="Partner 3" class="h-12 w-auto grayscale opacity-75 hover:opacity-100 transition-opacity">
+                <img src="https://via.placeholder.com/150x50.png?text=Partner4" alt="Partner 4" class="h-12 w-auto grayscale opacity-75 hover:opacity-100 transition-opacity">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-16 bg-neutral" role="region" aria-labelledby="features-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="features-title" class="text-3xl font-extrabold text-gray-900 text-center mb-12">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Interactive Lessons</h3>
+                    <p class="text-gray-600">Engaging and easy-to-understand lessons on personal finance topics.</p>
+                    <ul class="list-disc pl-5 mt-3 text-sm text-gray-500">
+                        <li>Saving strategies</li>
+                        <li>Budgeting techniques</li>
+                        <li>Investing basics</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gamified Challenges</h3>
+                    <p class="text-gray-600">Fun challenges and quizzes to reinforce your learning and track progress.</p>
+                    <ul class="list-disc pl-5 mt-3 text-sm text-gray-500">
+                        <li>Weekly challenges</li>
+                        <li>Leaderboards</li>
+                        <li>Rewards and badges</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Insights</h3>
+                    <p class="text-gray-600">Get personalized recommendations and insights based on your financial goals.</p>
+                    <ul class="list-disc pl-5 mt-3 text-sm text-gray-500">
+                        <li>Goal setting</li>
+                        <li>Spending analysis</li>
+                        <li>Personalized tips</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white" role="region" aria-labelledby="benefits-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="lg:col-span-1">
+                    <h2 id="benefits-title" class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Unlock Your
+                        Financial Potential</h2>
+                    <p class="text-lg text-gray-700">
+                        Learn how to manage your money effectively and make smart financial decisions for a brighter future.
+                    </p>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-2">
+                    <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
+                        <li>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-xl font-semibold text-gray-800">Build Good Habits</h3>
+                                        <p class="text-gray-600">Develop essential financial habits from an early age.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-xl font-semibold text-gray-800">Make Informed Decisions</h3>
+                                        <p class="text-gray-600">Gain the knowledge to make smart choices about your money.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-xl font-semibold text-gray-800">Achieve Your Goals</h3>
+                                        <p class="text-gray-600">Learn how to save for your goals and achieve financial freedom.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-xl font-semibold text-gray-800">Secure Your Future</h3>
+                                        <p class="text-gray-600">Build a solid foundation for a financially secure future.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use-Case Cards -->
+    <section class="py-16 bg-neutral" role="region" aria-labelledby="use-cases-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="use-cases-title" class="text-3xl font-extrabold text-gray-900 text-center mb-12">How FinanceMe Helps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Saving for College</h3>
+                    <p class="text-gray-600">Learn how to save money for your college education and reduce student debt.</p>
+                    <img src="https://via.placeholder.com/350x150.png?text=College+Savings" alt="College Savings"
+                        class="mt-4 rounded-md">
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Managing Pocket Money</h3>
+                    <p class="text-gray-600">Learn how to budget and manage your pocket money effectively.</p>
+                    <img src="https://via.placeholder.com/350x150.png?text=Pocket+Money+Management"
+                        alt="Pocket Money Management" class="mt-4 rounded-md">
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Investing for the Future</h3>
+                    <p class="text-gray-600">Get introduced to the world of investing and learn how to grow your wealth.</p>
+                    <img src="https://via.placeholder.com/350x150.png?text=Investing+Basics" alt="Investing Basics"
+                        class="mt-4 rounded-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider (Static HTML) -->
+    <section class="py-16 bg-white" role="region" aria-labelledby="testimonials-title">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="testimonials-title" class="text-3xl font-extrabold text-gray-900 text-center mb-8">What Students Are
+                Saying</h2>
+            <div class="space-y-6">
+                <div class="bg-neutral rounded-lg shadow-md p-6 text-center">
+                    <p class="text-gray-700 italic mb-4">"FinanceMe has helped me understand the importance of saving
+                        money and making smart choices."</p>
+                    <p class="text-gray-800 font-semibold">- Priya Sharma</p>
+                    <p class="text-gray-500 text-sm">Student, Delhi Public School</p>
+                </div>
+                <div class="bg-neutral rounded-lg shadow-md p-6 text-center">
+                    <p class="text-gray-700 italic mb-4">"I used to spend all my pocket money, but now I know how to
+                        budget and save for things I want."</p>
+                    <p class="text-gray-800 font-semibold">- Rohan Verma</p>
+                    <p class="text-gray-500 text-sm">Student, DAV Public School</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-16 bg-neutral" role="region" aria-labelledby="faq-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="faq-title" class="text-3xl font-extrabold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="w-full text-left text-gray-800 font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1" aria-expanded="false" aria-controls="faq-content-1">
+                        What is FinanceMe?
+                    </button>
+                    <div id="faq-content-1" class="mt-2 text-gray-600 hidden">
+                        FinanceMe is a financial literacy platform designed to help school students in urban India learn
+                        about saving, budgeting, and investing.
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="w-full text-left text-gray-800 font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1" aria-expanded="false" aria-controls="faq-content-2">
+                        Is FinanceMe free to use?
+                    </button>
+                    <div id="faq-content-2" class="mt-2 text-gray-600 hidden">
+                        Yes, FinanceMe is free to use for all students.
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="w-full text-left text-gray-800 font-semibold focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1" aria-expanded="false" aria-controls="faq-content-3">
+                        How can I contact FinanceMe for support?
+                    </button>
+                    <div id="faq-content-3" class="mt-2 text-gray-600 hidden">
+                        You can contact us through the <a href="#contact" class="text-blue-500 hover:underline">Contact Us</a>
+                        form on our website.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <div class="py-16 bg-blue-600">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Start Your Financial Journey Today!</h2>
+            <p class="text-xl text-blue-100 mb-8">Empower yourself with the knowledge and skills to manage your money
+                wisely.</p>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors" aria-label="Get Started Now">Get Started Now</a>
+        </div>
+    </div>
+
+    <!-- Footer with Links -->
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">FinanceMe</h3>
+                    <p class="text-gray-400">Empowering students with the financial knowledge and skills to succeed in
+                        the future.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white" aria-label="About Us">About Us</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white" aria-label="Features">Features</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#faq" class="text-gray-400 hover:text-white" aria-label="FAQ">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white" aria-label="Contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white" aria-label="Terms of Service">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white" aria-label="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FinanceMe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
